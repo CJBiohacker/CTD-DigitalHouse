@@ -52,6 +52,8 @@ console.log("|  Média entre 3 números =>", mediaDeTresNumeros(5, 2, 3));
 console.log("|  Porcentagem =>", calculaPorcentagem(1250, 23));
 console.log("|  Gerador de Porcentagem =>", geradorDePorcentagem(55, 200) + "%");
 
+/* -------------------------------------------------------------------------------------------------- */
+// Função pra calcular média que se adapta de acordo com o nº de itens inseridos.
 function media(vetor) {
     let sum = 0;
 
@@ -65,6 +67,7 @@ function media(vetor) {
 };
 
 console.log(media([1, 2, 3]));
+/* -------------------------------------------------------------------------------------------------- */
 
 let a = "string";
 let b = 1
