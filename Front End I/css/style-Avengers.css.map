@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,OAAO,CAAC,4EAAI;AAEZ,AAAA,IAAI,CAAC;EACD,gBAAgB,EAAC,OAAO;CAiB3B;;AAlBD,AAGI,IAHA,CAGA,EAAE,CAAC;EACC,KAAK,EAAC,KAAK;CAEd;;AANL,AAQI,IARA,CAQA,cAAc,CAAC;EACX,gBAAgB,EAAE,gCAAgC;EAClD,gBAAgB,EAAE,SAAS;EAC3B,KAAK,EAAE,IAAI;EACX,MAAM,EAAE,KAAK;CAEhB",
+    "sources": [
+        "style-Avengers.scss"
+    ],
+    "names": [],
+    "file": "style-Avengers.css"
+}

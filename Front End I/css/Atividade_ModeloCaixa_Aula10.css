@@ -1,0 +1,29 @@
+* body {
+  background-image: url("https://i.ytimg.com/vi/Hr_KUxFMcB8/maxresdefault.jpg");
+  background-size: 1400px 700px;
+  text-align: center;
+  padding: 35px;
+}
+
+* body h1 {
+  font-size: 48px;
+}
+
+* body h2 {
+  font-size: 24px;
+}
+
+* body button {
+  border-radius: 6px;
+  border-style: solid;
+  border-color: white;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 18px;
+  width: auto;
+  height: auto;
+  color: blue;
+  background-color: white;
+}
+/*# sourceMappingURL=Atividade_ModeloCaixa_Aula10.css.map */
