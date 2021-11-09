@@ -1,0 +1,36 @@
+body {
+    margin: 0.5px;
+}
+
+.container {
+    position: relative;
+}
+
+.caixa {
+    padding: 50px;
+    font-size: 50px;
+    border: 5px solid;
+    text-align: center;
+}
+
+#cx-externa-A {
+    border: 2px solid;
+    padding: 20px;
+    position: absolute;
+}
+
+#cx-externa-B {
+    border: 2px solid;
+    padding: 20px;
+    position: absolute;
+    left: 1174px;
+    top: 0.75px;
+}
+
+#cx-externa-C {
+    border: 2px solid;
+    padding: 20px;
+    position: fixed;
+    left: 623px;
+    bottom: 0.75px;
+}
