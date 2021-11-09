@@ -1,31 +1,7 @@
-/* 
-Olá, você foi contratado para executar este projeto. É importante que você analise, entenda o pedido do cliente e desenvolva conforme solicitado. Veja abaixo os requisitos do projeto:
-
-- Precisamos desenvolver um menu para um microondas super veloz, onde teremos 5 opções de comida com seus respectivos tempos pré-definidos. 
-
-      1 - Pipoca – 10 segundos (padrão);
-      2 - Macarrão – 8 segundos (padrão);
-      3 - Carne – 15 segundos (padrão);
-      4 - Feijão – 12 segundos (padrão);
-      5 - Brigadeiro – 8 segundos (padrão); 
-
-- O usuário poderá alterar o tempo padrão, aumentando ou diminuindo de acordo com sua vontade. Se o tempo informado for maior que 2x o necessário, exibir mensagem que a comida queimou.
-- Se o tempo for menor que o padrão, exibir a mensagem: "tempo insuficiente"; 
-- Opções não listadas no menu, devem exibir uma mensagem de erro: "Prato inexistente";
-- Se o tempo for 3x maior que o necessário para o prato, o microondas deve exibir a mensagem: “kabumm”;
-- No final de cada tarefa, o microondas deverá exibir a mensagem: "Prato pronto, bom apetite!!!".
-*/
-
-let tempoPadrao;
-
-// Gera um nº aleatório de 1-5 simulando a seleção de um dos pratos.
-const numPrato = Math.ceil(Math.random() * 5);
-
-// Gera um nº aleatório de 1-65 simular a escolha do tempo de preparo do prato.
-const selecTempo = Math.ceil(Math.random() * 65);
-
 // Função de Escolha do Prato e definição do tempo de cozimento padrão correspondente.
-const tempoPrato = (numero) => {
+const tempoPrato = (numero, tempoUsuario) => {
+    let tempoPadrao;
+
     switch (numero) {
         case 1:
             console.log("Você escolheu Pipoca.");
@@ -48,21 +24,17 @@ const tempoPrato = (numero) => {
             tempoPadrao = 8;
             break
         default:
-            console.log("Prato Inexistente.");;
-            break
+            return console.log("Prato Inexistente.");
     };
-    console.log(`Este prato leva ${tempoPadrao}s para ficar pronto.\nVocê selecionou ${selecTempo}s no microondas.`);
-};
 
-tempoPrato(numPrato);
+    console.log(`Este prato leva ${tempoPadrao}s para ficar pronto.\nVocê selecionou ${tempoUsuario}s no microondas.`);
 
-// Condições => Abaixo do tempo, tempo correto ou aproximado, e 2x maior que o tempo padrão.
-const condicaoPrato1 = (selecTempo < tempoPadrao);
-const condicaoPrato2 = ((selecTempo === tempoPadrao) || (selecTempo <= (tempoPadrao * 2)));
-const condicaoPrato3 = ((selecTempo > (tempoPadrao * 2)) && (selecTempo < (tempoPadrao * 3)));
+    // Condições => Abaixo do tempo, tempo correto ou aproximado, e 2x maior que o tempo padrão.
+    const condicaoPrato1 = (tempoUsuario < tempoPadrao);
+    const condicaoPrato2 = ((tempoUsuario === tempoPadrao) || (tempoUsuario <= (tempoPadrao * 2)));
+    const condicaoPrato3 = ((tempoUsuario > (tempoPadrao * 2)) && (tempoUsuario < (tempoPadrao * 3)));
 
-// Função condicional para resultado da mensagem final.
-const mensagemResultado = () => {
+    // Estrutura Condicional pra definir o estado final do prato ou do microondas.
     let condicional = (condicaoPrato1) ? console.log("Tempo insuficiente.") :
         (condicaoPrato2) ? console.log("Prato pronto, bom apetite!!!") :
             (condicaoPrato3) ? console.log("A comida queimou.") :
@@ -71,8 +43,18 @@ const mensagemResultado = () => {
     return condicional;
 };
 
-mensagemResultado();
+tempoPrato(15, 80, '\n');
+tempoPrato(3, 30, '\n');
+tempoPrato(1, 8, '\n');
+tempoPrato(2, 18, '\n');
+tempoPrato(4, 60, '\n');
+tempoPrato(5, 12), '\n';
 
+// // Gera um nº aleatório de 1-5 simulando a seleção de um dos pratos.
+// const numPrato = Math.ceil(Math.random() * 5);
+
+// // Gera um nº aleatório de 1-65 simular a escolha do tempo de preparo do prato.
+// const selecTempo = Math.ceil(Math.random() * 65);
 // Verificação do resultado lógico das condicionais.
 // console.log(`${condicaoPrato1}, ${condicaoPrato2} , ${condicaoPrato3}`);
 
