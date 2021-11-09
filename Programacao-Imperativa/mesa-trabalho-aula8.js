@@ -15,4 +15,4 @@ function podeSubir(altura, companhia) {
     }
 };
 
-podeSubir(1.10,true);
+podeSubir(1.35,true);
