@@ -18,10 +18,10 @@ Olá, você foi contratado para executar este projeto. É importante que você a
 
 let tempoPadrao;
 
-// Gera um nº aleatório de 1-5 para selecionar um dos pratos
+// Gera um nº aleatório de 1-5 simulando a seleção de um dos pratos.
 const numPrato = Math.ceil(Math.random() * 5);
 
-// Gera um nº aleatório de 1-65 para simular o usuário escolhendo o tempo de preparo do Prato.
+// Gera um nº aleatório de 1-65 simular a escolha do tempo de preparo do prato.
 const selecTempo = Math.ceil(Math.random() * 65);
 
 // Função de Escolha do Prato e definição do tempo de cozimento padrão correspondente.
@@ -51,14 +51,15 @@ const tempoPrato = (numero) => {
             console.log("Prato Inexistente.");;
             break
     };
+    console.log(`Este prato leva ${tempoPadrao}s para ficar pronto.\nVocê selecionou ${selecTempo}s no microondas.`);
 };
 
 tempoPrato(numPrato);
 
-// Condições => Abaixo do tempo, tempo correto e 2x maior que o tempo padrão do prato.
+// Condições => Abaixo do tempo, tempo correto ou aproximado, e 2x maior que o tempo padrão.
 const condicaoPrato1 = (selecTempo < tempoPadrao);
-const condicaoPrato2 = (selecTempo === tempoPadrao);
-const condicaoPrato3 = (selecTempo > (tempoPadrao * 2) && selecTempo < (tempoPadrao * 3));
+const condicaoPrato2 = ((selecTempo === tempoPadrao) || (selecTempo <= (tempoPadrao * 2)));
+const condicaoPrato3 = ((selecTempo > (tempoPadrao * 2)) && (selecTempo < (tempoPadrao * 3)));
 
 // Função condicional para resultado da mensagem final.
 const mensagemResultado = () => {
@@ -72,8 +73,7 @@ const mensagemResultado = () => {
 
 mensagemResultado();
 
-
-console.log(selecTempo);
-console.log(`${condicaoPrato1}, ${condicaoPrato2} , ${condicaoPrato3}`);
+// Verificação do resultado lógico das condicionais.
+// console.log(`${condicaoPrato1}, ${condicaoPrato2} , ${condicaoPrato3}`);
 
 
