@@ -43,12 +43,12 @@ const tempoPrato = (numero, tempoUsuario) => {
     return condicional;
 };
 
-tempoPrato(15, 80, '\n');
-tempoPrato(3, 30, '\n');
-tempoPrato(1, 8, '\n');
-tempoPrato(2, 18, '\n');
-tempoPrato(4, 60, '\n');
-tempoPrato(5, 12), '\n';
+tempoPrato(15, 80);
+tempoPrato(3, 30);
+tempoPrato(1, 8);
+tempoPrato(2, 18);
+tempoPrato(4, 60);
+tempoPrato(5, 12);
 
 // // Gera um nº aleatório de 1-5 simulando a seleção de um dos pratos.
 // const numPrato = Math.ceil(Math.random() * 5);
