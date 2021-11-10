@@ -1,0 +1,28 @@
+* {
+  margin: 0px;
+}
+
+* body {
+  background-image: url(./FotoItaguaiCheckpoint.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+* body header {
+  position: relative;
+}
+
+* body header #nav-bar {
+  position: -webkit-sticky;
+  position: sticky;
+  background: rgba(234, 232, 232, 0.7);
+  border-radius: 10px;
+  top: 0;
+}
+
+* body header #nav-bar #titulo {
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+  text-align: center;
+}
+/*# sourceMappingURL=checkpoint.css.map */
