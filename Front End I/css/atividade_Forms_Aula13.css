@@ -1,0 +1,16 @@
+* {
+    margin-top: 0;
+}
+
+header {
+    text-align: center;
+}
+
+.campo-dados {
+    box-sizing: border-box;
+    width: fit-content;
+    border-radius: 15px;
+    border-width: 5px;
+    margin: 5px;
+    font-size: 20px;
+}

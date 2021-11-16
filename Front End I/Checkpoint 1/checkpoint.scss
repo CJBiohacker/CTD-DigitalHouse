@@ -1,5 +1,7 @@
-$h1Fonte: Arial, Helvetica, sans-serif;
-$h1Cor: white;
+$h1Cor: rgb(43, 0, 255);
+$bg: rgba(234, 232, 232, 0.8);
+$fontePrincipal:'Lora', serif;
+$fonteSecundaria:'Montagu Slab', serif;
 
 * {
     margin: 0px;
@@ -10,18 +12,25 @@ $h1Cor: white;
         background-size: cover;
         
         header { 
-            position: relative;
+            position: -webkit-sticky;
+            position: sticky;
+            top: 0px;
 
             #nav-bar {
-                position: -webkit-sticky;
-                position: sticky;
-                background: rgba(234, 232, 232, 0.7);
-                border-radius: 10px;
-                top: 0;
+                background: $bg;
+                border-radius: 8px;
+                padding: 20px 0;
                 
-
+                display: flex;
+                align-items: center;
+                justify-content: space-evenly; 
+                
+                >img {
+                   width: 30px; 
+                }
+                        
                 #titulo {
-                    font-family: $h1Fonte;
+                    font-family: $fontePrincipal;
                     color: $h1Cor;
                     text-align: center;
                 }
@@ -29,6 +38,73 @@ $h1Cor: white;
             }
 
         }
-   
+
+        main {
+            display: flex;
+            flex-direction: column ;
+            justify-content: center;
+            align-items: center;
+            align-content: space-around;
+
+            #intro {
+                font-family: $fonteSecundaria;
+                font-weight: 400;
+                margin: 35px;
+                padding: 15px;
+                text-align: justify;
+                background: $bg;
+
+            }
+
+            #video {
+                border: 2.5px solid;
+                border-radius: 8px;        
+            }
+
+            #curio-titulo {
+                margin-top:15px;
+                font-family: $fontePrincipal;
+                font-weight: 400;
+                color: white;
+
+            }
+
+            .card-curio {
+                
+
+            }
+
+        }
+        
+        footer { 
+            
+            .rodape {
+                margin: 0 630px;
+                
+
+                >h4 {
+                    font-family: $fontePrincipal;
+                    padding: 0px 32px;
+                                    
+                }
+
+                .icones {
+                    display: flex;
+                    justify-content: space-around;   
+                    align-items: center;
+                    
+
+                     >a {
+                        width: 50px;
+                
+                    }
+
+                }
+
+            }     
+
+        }
+        
     }   
+
 }
