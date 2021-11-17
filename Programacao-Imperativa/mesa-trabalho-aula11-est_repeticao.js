@@ -25,7 +25,6 @@ const passagemElementos = (vetorPrincipal, vetorAlvo) => {
 passagemElementos(filmes, animacoes);
 
 // 4. Função comparadora entre os elementos de vetores diferentes.
-
 const jogos = ["Crysis", "Super Mario 64", "Rage 2", "Metal Gear Solid 3"];
 const jogosFPS = ["Crysis", "007 Goldeneye", "Rage 2", "Perfect Dark"];
 
