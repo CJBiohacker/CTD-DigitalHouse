@@ -2,22 +2,66 @@
   padding: 0;
 }
 
+* body {
+  background-image: url("../images/EndGame Logo Tela.svg");
+  background-repeat: no-repeat;
+  background-position-x: center;
+  height: 1100px;
+}
+
+* body main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+* body main > h1 {
+  font-family: "Press Start 2P", cursive;
+  font-size: 20px;
+  text-align: center;
+  width: 750px;
+  padding: 5px;
+}
+
 * body main .campo-dados {
+  font-family: "Special Elite", cursive;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  padding-left: 12px;
+  padding-left: 15px;
   border-radius: 8px;
+  border-color: red;
+}
+
+* body main .campo-dados > legend {
+  padding: 5px;
 }
 
 * body main .campo-dados > div {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding: 15px 15px 15px 0;
 }
 
 * body main .campo-dados > div .campo {
-  margin: 8px 10px;
+  margin: 10px 10px;
+}
+
+* body main .campo-dados > div .campo > input {
+  border-color: red;
 }
 /*# sourceMappingURL=atividade_forms_aula14.css.map */

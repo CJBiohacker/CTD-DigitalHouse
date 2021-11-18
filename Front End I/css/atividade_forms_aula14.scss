@@ -1,49 +1,68 @@
+$fontePrincipal:  'Special Elite', cursive;
+$fonteTitulo: 'Press Start 2P', cursive;
+
 * {
-padding: 0;
+    padding: 0;
 
     body {
+        background-image: url('../images/EndGame\ Logo\ Tela.svg');
+        background-repeat: no-repeat;
+        background-position-x: center;
+        height: 1100px;
 
         header {
-
 
         }
 
         main {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
 
-            
-            .campo-dados {
-                width: fit-content;
-                padding-left: 12px;
-                border-radius: 8px;
+            >h1 {
+                font-family: $fonteTitulo;
+                font-size: 20px;
+                text-align: center;
+                width: 750px;
+                padding: 5px;
+            }
                 
+            .campo-dados {
+                font-family: $fontePrincipal;
+                width: fit-content;
+                padding-left: 15px;
+                border-radius: 8px;
+                border-color: red;              
                 
                 >legend {
-                   
+                    padding: 5px;
 
                 }
 
                 >div {
                     display: flex;
+                    align-items: center;
                     padding: 15px 15px 15px 0;
                     
                     
 
                     .campo {
-                        margin: 8px 10px;
+                        margin: 10px 10px;
+
+                        >input {
+                            border-color: red;
+
+                        }
     
                     }
 
-                }
-
-                
+                } 
 
             }
 
         }
 
-
-
     }
-
 
 }
