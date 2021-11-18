@@ -1,7 +1,8 @@
 const brunaLoise = [23, 82, 46];
 const rodrigoMarques = [45, 8, 32];
 
-function encontrarGanhador(vetor1, vetor2) {
+
+const encontrarGanhador = (vetor1, vetor2) => {
     let pontosComediante1 = 0;
     let pontosComediante2 = 0;
 
