@@ -19,8 +19,8 @@
   width: 15%;
   -webkit-animation-name: movimento;
           animation-name: movimento;
-  -webkit-animation-duration: 2s;
-          animation-duration: 2s;
+  -webkit-animation-duration: 2.5s;
+          animation-duration: 2.5s;
   -webkit-animation-iteration-count: infinite;
           animation-iteration-count: infinite;
   -webkit-transition-timing-function: ease-in-out;
@@ -31,18 +31,19 @@
   0% {
     opacity: 0%;
   }
-  25% {
-    opacity: 40%;
-  }
-  50% {
-    opacity: 50%;
+  65% {
+    -webkit-transform: translateX(550px);
+            transform: translateX(550px);
+    opacity: 100%;
   }
   70% {
+    -webkit-transform: translateX(350px);
+            transform: translateX(350px);
     opacity: 75%;
   }
   100% {
-    -webkit-transform: translateX(450px);
-            transform: translateX(450px);
+    -webkit-transform: translateX(550px);
+            transform: translateX(550px);
     opacity: 100%;
   }
 }
@@ -51,18 +52,19 @@
   0% {
     opacity: 0%;
   }
-  25% {
-    opacity: 40%;
-  }
-  50% {
-    opacity: 50%;
+  65% {
+    -webkit-transform: translateX(550px);
+            transform: translateX(550px);
+    opacity: 100%;
   }
   70% {
+    -webkit-transform: translateX(350px);
+            transform: translateX(350px);
     opacity: 75%;
   }
   100% {
-    -webkit-transform: translateX(450px);
-            transform: translateX(450px);
+    -webkit-transform: translateX(550px);
+            transform: translateX(550px);
     opacity: 100%;
   }
 }
