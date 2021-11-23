@@ -16,22 +16,22 @@
                 width: 15%;
 
                 animation-name: movimento;                  // Nome da Animação
-                animation-duration: 2.5s;                     // Tempo da Animação em 2 segundos.
+                animation-duration: 2.5s;                   // Tempo da Animação em 2 segundos.
                 animation-iteration-count: infinite;        // Nº de Repetições infinita
-                transition-timing-function: ease-in-out;    // Melhor a fluidez da animação
+                transition-timing-function: ease-in-out;    // Melhora a fluidez da animação
 
-                @keyframes movimento {      // Descrição dos frames e propriedades da animação
+                @keyframes movimento {                      // Descrição dos frames e propriedades da animação
                     0% { opacity: 0%;}
-                    65% { transform:translateX(550px) ; opacity: 100%}
+                    65% { transform: translateX(550px) ; opacity: 100%}
                     70% { transform: translateX(350px); opacity: 75%;}
-                    100% {transform: translateX(550px); opacity: 100%;}
+                    100% { transform: translateX(550px); opacity: 100%;}
                 }
             }
 
             #imagem2 {
                 width: 20%;
 
-                &:hover {               // Ao passar o mouse sobre a imagem, rotaciona em 90 graus.
+                &:hover {                                       // Ao passar o mouse sobre a imagem, rotaciona em 90 graus.
                     transform: rotateZ(90deg)
 
                 }
