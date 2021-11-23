@@ -22,7 +22,7 @@ const fbJSON = {
 
 // Objetos Literais
 
-// Dados dos Clientes - Exercícios 1, 2 e 3.
+// Exercícios 1, 2 e 3 - Dados dos Clientes
 // Identificação => Número da conta, posição do vetor tipo de conta (0 ou 1), valor do saldo, nome e sobrenome do titular.
 
 const Abigail = [5486273622, 0, 27771, "Abigael Natte"];
@@ -74,7 +74,7 @@ const Lista = {
     Bendite: Bendite
 };
 
-// Exercício 5 - Objeto Banco contendo a Lista de Clientes e a função 'consultarCliente' que retorna os dados do titular escolhido
+// Exercício 5, 6, 7  - Objeto Banco contendo a Lista de Clientes. Função/Método 'consultarCliente' que retorna os dados da variável do titular passado como parâmetro. Função/Método 'deposito'
 
 const Banco = {
     clientes: [
@@ -82,10 +82,16 @@ const Banco = {
     ],
     consultarCliente: (listaTitular) => {
         return Conta(listaTitular);
+    },
+    deposito: (listaTitular, valorDinheiro) => {
+
+
+        return console.log(`Depósito realizado, seu novo saldo é: R$ ${valorDinheiro}`);
     }
 };
 
 Banco.consultarCliente(Lista.Abigail);
+Banco.deposito(Lista.Alonso, 100);
 
 
 
