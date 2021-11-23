@@ -22,35 +22,44 @@
 
                 @keyframes movimento {      // Descrição dos frames e propriedades da animação
                     0% { opacity: 0%;}
-                    50% { opacity: 80%;}
+                    25% {opacity: 40%;}
+                    50% { opacity: 50%;}
+                    70% {opacity: 75%;}
                     100% { transform:translateX(450px) ; opacity: 100%}
                 }
-
             }
 
+
             #imagem2 {
-                width: 25%;
+                width: 20%;
 
-                animation-name: rotação;
-                animation-duration: 2s;
-                animation-iteration-count: infinite;
-                animation-timing-function: ease;
+                &:hover {               // Ao passar o mouse sobre a imagem, rotaciona em 90 graus.
+                    transform: rotateZ(90deg)
 
-                @keyframes rotação {        // Rotação em graus do elemento HTML.
-                    0% { transform: rotate(0deg);}
-                    100% {transform: rotate(360deg);}
                 }
-            
             }
        
             #botao {
-                padding: 50px;
+                margin-left: 50px;
+                padding: 45px;
                 border-radius: 5%;
+
+                &:hover {
+                    animation-name: transição-cor;
+                    animation-duration: 3s;
+                    animation-iteration-count: infinite;
+                    transition-timing-function: ease-in-out;
+
+                    @keyframes transição-cor {      // Descrição dos frames e propriedades da animação, mudança na opacidade 
+                        0% { opacity: 100%;}
+                        100% { background-color: #27037D; opacity: 100%}
+                    }
+
+                }
             }
             
         }
 
     }
-
 
 }

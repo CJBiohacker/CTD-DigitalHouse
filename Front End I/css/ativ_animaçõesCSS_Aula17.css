@@ -31,8 +31,14 @@
   0% {
     opacity: 0%;
   }
+  25% {
+    opacity: 40%;
+  }
   50% {
-    opacity: 80%;
+    opacity: 50%;
+  }
+  70% {
+    opacity: 75%;
   }
   100% {
     -webkit-transform: translateX(450px);
@@ -45,8 +51,14 @@
   0% {
     opacity: 0%;
   }
+  25% {
+    opacity: 40%;
+  }
   50% {
-    opacity: 80%;
+    opacity: 50%;
+  }
+  70% {
+    opacity: 75%;
   }
   100% {
     -webkit-transform: translateX(450px);
@@ -56,41 +68,48 @@
 }
 
 * body div #imagem2 {
-  width: 25%;
-  -webkit-animation-name: rotação;
-          animation-name: rotação;
-  -webkit-animation-duration: 2s;
-          animation-duration: 2s;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
-  -webkit-animation-timing-function: ease;
-          animation-timing-function: ease;
+  width: 20%;
 }
 
-@-webkit-keyframes rotação {
-  0% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-  }
-  100% {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
-  }
-}
-
-@keyframes rotação {
-  0% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-  }
-  100% {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
-  }
+* body div #imagem2:hover {
+  -webkit-transform: rotateZ(90deg);
+          transform: rotateZ(90deg);
 }
 
 * body div #botao {
-  padding: 50px;
+  margin-left: 50px;
+  padding: 45px;
   border-radius: 5%;
+}
+
+* body div #botao:hover {
+  -webkit-animation-name: transição-cor;
+          animation-name: transição-cor;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-transition-timing-function: ease-in-out;
+          transition-timing-function: ease-in-out;
+}
+
+@-webkit-keyframes transição-cor {
+  0% {
+    opacity: 100%;
+  }
+  100% {
+    background-color: #27037D;
+    opacity: 100%;
+  }
+}
+
+@keyframes transição-cor {
+  0% {
+    opacity: 100%;
+  }
+  100% {
+    background-color: #27037D;
+    opacity: 100%;
+  }
 }
 /*# sourceMappingURL=ativ_animaçõesCSS_Aula17.css.map */
