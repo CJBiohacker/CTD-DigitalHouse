@@ -83,15 +83,34 @@ const Banco = {
     consultarCliente: (listaTitular) => {
         return Conta(listaTitular);
     },
-    deposito: (listaTitular, valorDinheiro) => {
+    deposito: (titular, valorDeposito) => {
+        let operacaoDeposito = () => {
+            return titular[2] += valorDeposito;
+        };
 
+        return console.log(`Depósito realizado, Sr.(a) ${titular[3]}. Seu novo saldo é: R$ ${operacaoDeposito()}`);
+    },
+    saque: (titular, valorSaque) => {
+        const saldoInsuf = (titular[2] < valorSaque);
+        const saldoOk = (titular[2] >= valorSaque);
 
-        return console.log(`Depósito realizado, seu novo saldo é: R$ ${valorDinheiro}`);
+        if (saldoInsuf) {
+            return console.log(`Saldo insuficiente para saque, Sr.(a) ${titular[3]}.`);
+
+        } else if (saldoOk) {
+            let operacaoSaque = () => {
+                return titular[2] -= valorSaque;
+            }
+
+            return console.log(`Saque realizado com sucesso, seu novo saldo é de: R$ ${operacaoSaque()}`);
+        };
     }
 };
 
-Banco.consultarCliente(Lista.Abigail);
-Banco.deposito(Lista.Alonso, 100);
+Banco.consultarCliente(Lista.Alonso);
+Banco.deposito(Lista.Alonso, 350);
+Banco.saque(Lista.Thomasim, 2200);
+Banco.saque(Lista.Thomasim, 2000);
 
 
 
