@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Treino Flexbox Aula</title>
+</head>
+
+<style>
+    * body div.main-title {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    * body div h1 {
+        margin-top: 5px;
+        margin-bottom: 0px;
+    }
+
+    .card {
+        border-style: solid;
+        border-color: black;
+        border-width: 2px;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+    }
+
+    #card-group {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 5px;
+    }
+
+    .button {
+        padding: 5px;
+    }
+</style>
+
+<body>
+    <div class="main-title">
+        <h1>Flexbox - Display Flex</h1>
+        <h2>Possibilita que elementos responsivos dentro de containers sejam organizados.</h3>
+    </div>
+    <div id="card-group">
+        <div class="card">
+            <h4>Titulo</h4>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minus rerum commodi nostrum ratione accusantium
+                quis cumque quos ullam voluptatum blanditiis odit provident corrupti, soluta odio sint nisi, porro
+                dolorum laborum!</p>
+            <div>
+                <button class="button">clique aqui!</button>
+            </div>
+        </div>
+        <div class="card">
+            <h4>Titulo</h4>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minus rerum commodi nostrum ratione accusantium
+                quis cumque quos ullam voluptatum blanditiis odit provident corrupti, soluta odio sint nisi, porro
+                dolorum laborum!</p>
+            <div>
+                <button class="button">clique aqui!</button>
+            </div>
+        </div>
+        <div class="card">
+            <h4>Titulo</h4>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minus rerum commodi nostrum ratione accusantium
+                quis cumque quos ullam voluptatum blanditiis odit provident corrupti, soluta odio sint nisi, porro
+                dolorum laborum!</p>
+            <div>
+                <button class="button">clique aqui!</button>
+            </div>
+        </div>
+        <div class="card">
+            <h4>Titulo</h4>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minus rerum commodi nostrum ratione accusantium
+                quis cumque quos ullam voluptatum blanditiis odit provident corrupti, soluta odio sint nisi, porro
+                dolorum laborum!</p>
+            <div>
+                <button class="button">clique aqui!</button>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

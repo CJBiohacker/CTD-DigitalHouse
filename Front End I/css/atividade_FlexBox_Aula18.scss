@@ -1,0 +1,63 @@
+* {
+    margin: 0;
+    background-color: black;
+    color: white;
+
+    body {
+
+
+        header {
+            margin: 10px;
+            display: flex;
+            justify-content: space-between;
+
+            nav {
+                display: flex;
+                flex-direction: row;
+                justify-content: flex-start;
+                gap: 20px;
+
+                li {
+                    list-style-type: none;
+                }
+            }
+
+            div {
+                display: flex;
+                justify-content: flex-end;
+
+                li {
+                    list-style-type: none;
+                }
+
+            }
+
+        }
+
+        main {
+
+            .container {
+                margin: 100px;
+                display: flex;
+                               
+                gap: 10px;
+                
+
+                .card {
+                    border-radius: 5px;
+                    border-style: solid;
+                    border-color: aqua;
+
+                    img {
+                        width: 100%;                       
+                    }
+
+                }
+
+            }
+
+        }
+
+    }
+
+}
