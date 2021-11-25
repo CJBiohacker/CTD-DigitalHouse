@@ -102,7 +102,7 @@ const Banco = {
                 return titular[2] -= valorSaque;
             }
 
-            return console.log(`Saque realizado com sucesso, seu novo saldo é de: R$ ${operacaoSaque()}`);
+            return console.log(`Saque realizado com sucesso, Sr.(a) ${titular[3]} seu novo saldo é de: R$ ${operacaoSaque()}`);
         };
     }
 };
