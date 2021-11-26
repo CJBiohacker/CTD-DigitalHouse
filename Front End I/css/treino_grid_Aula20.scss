@@ -1,0 +1,47 @@
+* {
+    // Browser Crossover. Permite que em todos os navegadores, o site tenha o mesmo espaçamento. Boas Práticas
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+
+    body {
+       
+
+        #grid-container {
+            width: 50%;
+            height: 50%;
+            display: grid;
+    
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+            gap: 10px;
+    
+
+            .grid-item-1 {
+                background-color: cornflowerblue;
+
+            }
+
+            .grid-item-2 {
+                background-color: blue;
+
+            }
+
+            .grid-item-3 {
+                background-color: yellow;
+
+            }
+
+            .grid-item-4 {
+                background-color: green;
+
+            }
+
+            .grid-item-5 {
+                background-color: aqua;
+
+            }
+        }
+    }
+}

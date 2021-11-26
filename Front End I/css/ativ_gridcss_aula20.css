@@ -1,0 +1,124 @@
+* {
+  margin: 0;
+  border: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+* #grid-container {
+  width: 100%;
+  height: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 15% 5% 20% 20% 20% 20%;
+      grid-template-columns: 15% 5% 20% 20% 20% 20%;
+  -ms-grid-rows: 15% 5% 20% 20% 20% 20%;
+      grid-template-rows: 15% 5% 20% 20% 20% 20%;
+      grid-template-areas: "a a a a a a" "b c c c c c" "b c c c c c" "b c c c c c" "b c c c c c";
+}
+
+* #grid-container header {
+  background-color: #345B63;
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 6;
+  grid-area: a;
+  text-align: center;
+}
+
+* #grid-container header img {
+  width: 12%;
+  padding: 5px;
+}
+
+* #grid-container aside {
+  background-color: #152D35;
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 4;
+  -ms-grid-column: 1;
+  grid-area: b;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  padding-top: 40px;
+  gap: 40px;
+}
+
+* #grid-container aside h5 {
+  margin-left: 25px;
+  color: white;
+  font-size: 20px;
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 4;
+  -ms-grid-column: 1;
+  grid-area: b;
+}
+
+* #grid-container main {
+  width: 100%;
+  height: 100%;
+  background-color: #DDF0E4;
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 4;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 5;
+  grid-area: c;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+* #grid-container main > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 70px;
+}
+
+* #grid-container main > div > img {
+  width: 100%;
+  padding-bottom: 15px;
+}
+
+* #grid-container main > div > h1 {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  padding-bottom: 15px;
+}
+
+* #grid-container main > div > p {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+}
+/*# sourceMappingURL=ativ_gridcss_aula20.css.map */

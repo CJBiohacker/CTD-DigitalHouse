@@ -1,0 +1,40 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+* body #grid-container {
+  width: 50%;
+  height: 50%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  -ms-grid-rows: (1fr)[2];
+      grid-template-rows: repeat(2, 1fr);
+  gap: 10px;
+}
+
+* body #grid-container .grid-item-1 {
+  background-color: cornflowerblue;
+}
+
+* body #grid-container .grid-item-2 {
+  background-color: blue;
+}
+
+* body #grid-container .grid-item-3 {
+  background-color: yellow;
+}
+
+* body #grid-container .grid-item-4 {
+  background-color: green;
+}
+
+* body #grid-container .grid-item-5 {
+  background-color: aqua;
+}
+/*# sourceMappingURL=treino_grid_Aula20.css.map */
