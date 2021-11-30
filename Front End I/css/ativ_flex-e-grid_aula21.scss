@@ -43,12 +43,16 @@
                 gap: 8px;
 
                 .video {
-                    background-color: grey;
                     width: 85%;
                     height: 78%;
                     margin-left: 50px;
-                
+                                    
                     align-self: flex-start; 
+
+                    >iframe {
+                        border-radius: 5px;
+
+                    }
                 }
 
                 .title-container {
@@ -68,6 +72,9 @@
             }
 
             .aside-container {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
                 
 
                 .minivideo-container {
@@ -79,7 +86,8 @@
 
                     .minivideo {
                         background-color: grey;
-                        width: 50%;
+                        width: 48%;
+                        height: 100%;
 
                     }
 

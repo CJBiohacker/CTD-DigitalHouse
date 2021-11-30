@@ -52,7 +52,6 @@
 }
 
 * body .grid-container .video-container .video {
-  background-color: grey;
   width: 85%;
   height: 78%;
   margin-left: 50px;
@@ -60,10 +59,27 @@
       align-self: flex-start;
 }
 
+* body .grid-container .video-container .video > iframe {
+  border-radius: 5px;
+}
+
 * body .grid-container .video-container .title-container {
   margin-left: 50px;
   -ms-flex-item-align: start;
       align-self: flex-start;
+}
+
+* body .grid-container .aside-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
 }
 
 * body .grid-container .aside-container .minivideo-container {
@@ -81,6 +97,7 @@
 
 * body .grid-container .aside-container .minivideo-container .minivideo {
   background-color: grey;
-  width: 50%;
+  width: 48%;
+  height: 100%;
 }
 /*# sourceMappingURL=ativ_flex-e-grid_aula21.css.map */
