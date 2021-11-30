@@ -1,0 +1,86 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background-color: #ffffa1;
+}
+
+* body .grid-container {
+  width: 100%;
+  height: 100vh;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 70% 30%;
+      grid-template-columns: 70% 30%;
+  -ms-grid-rows: 6.5% 94.5%;
+      grid-template-rows: 6.5% 94.5%;
+      grid-template-areas: "a a" "b c";
+}
+
+* body .grid-container .border {
+  border: 1px solid black;
+}
+
+* body .grid-container .navbar {
+  background-color: green;
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: a;
+}
+
+* body .grid-container .video-container {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: b;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 8px;
+}
+
+* body .grid-container .video-container .video {
+  background-color: grey;
+  width: 85%;
+  height: 78%;
+  margin-left: 50px;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+}
+
+* body .grid-container .video-container .title-container {
+  margin-left: 50px;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+}
+
+* body .grid-container .aside-container .minivideo-container {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: c;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 8px;
+}
+
+* body .grid-container .aside-container .minivideo-container .minivideo {
+  background-color: grey;
+  width: 50%;
+}
+/*# sourceMappingURL=ativ_flex-e-grid_aula21.css.map */

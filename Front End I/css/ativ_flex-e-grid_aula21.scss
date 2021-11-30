@@ -1,0 +1,109 @@
+* {
+
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    background-color: rgb(255, 255, 161);
+
+    body {
+        
+
+        .grid-container {
+            width: 100%;
+            height: 100vh;
+
+            display: grid;
+            grid-template-columns: 70% 30%;
+            grid-template-rows: 6.5% 94.5%;
+
+            grid-template-areas: 
+            "a a"
+            "b c"
+            ;
+
+            .border {
+                border: 1px solid black;
+
+            }
+
+            .navbar {
+                background-color: green;
+                grid-area: a;   
+                
+            }
+            
+            .video-container {
+                grid-area: b;
+
+                display: flex;
+                flex-direction: column;
+                align-items: center;            // Eixo X - Horizontal
+                justify-content: center;        // Eixo Y - Vertical
+                gap: 8px;
+
+                .video {
+                    background-color: grey;
+                    width: 85%;
+                    height: 78%;
+                    margin-left: 50px;
+                
+                    align-self: flex-start; 
+                }
+
+                .title-container {
+                    margin-left: 50px;
+                    align-self: flex-start;
+                
+                    .video-title {
+
+
+                    }
+
+                    .video-subtitle {
+                        
+
+                    }
+                }
+            }
+
+            .aside-container {
+                
+
+                .minivideo-container {
+                    grid-area: c;
+
+                    display: flex;
+                    justify-content: center;
+                    gap: 8px;
+
+                    .minivideo {
+                        background-color: grey;
+                        width: 50%;
+
+                    }
+
+                    .minivideo-description {
+                
+
+                        .minivideo-title{
+
+                        }
+
+                        .minivideo-subtitle {
+
+                        }
+
+                        .minivideo-days {
+
+                        }
+
+                        .minivideo-views {
+
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
