@@ -1,13 +1,10 @@
 const array = [1, 2, 4, 8];
+const soma = (num1, num2) => { return num1 + num2 }
+let aux;
 
-console.log("O comprimento da Array é de: " + array.length);
+console.log(array[0]);
 
-for (let i = 0; i < array.length; i++) {
-    // montar uma lógica que eu diga pro JavaScript que ele some o elemento atual da array com o próximo, ou o atual com o anterior. 
-
-    console.log(array);
-
+for (let i = 1; i < array.length; i++) {
+    aux = soma(array[i - 1], array[i]);
+    console.log(aux);
 }
-
-// 1ª Iteração i = 0 , enquanto (i = 0) < 4
-// 
