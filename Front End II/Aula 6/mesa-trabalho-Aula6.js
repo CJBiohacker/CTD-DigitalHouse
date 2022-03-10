@@ -1,6 +1,6 @@
 // PASSO 1
 
-// Função que cria replica os elementos do card e insere.
+// Função que replica os elementos padrão e insere um card avulso.
 const inserirCardVazio = () => {                    // imgSrc, nomeFelino, descricao
     let getClassContainer = document.querySelector(`.container`);
 
@@ -36,3 +36,9 @@ const removerFelinos = () => {
     });
 }
 
+/*
+    1 - Criar uma opção para a seleção do card de felino (prompt)
+    2 - Veriricar, qual felino foi escolhido
+    3 - Usuário informa uma url/img para o felino
+    4 - Acessar o atributo 'src' e alterar para a img da internet.
+*/
