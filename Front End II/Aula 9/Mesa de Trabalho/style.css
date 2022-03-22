@@ -1,0 +1,153 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  border: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+* body #container {
+  width: 100vw;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+* body #container .display-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+* body #container .display-container > h5 {
+  text-align: end;
+}
+
+* body #container .display-container #display-main {
+  background-color: aqua;
+}
+
+* body #container #container-button {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 25% 25% 25% 25%;
+      grid-template-columns: 25% 25% 25% 25%;
+  -ms-grid-rows: 20% 20% 20% 20% 20%;
+      grid-template-rows: 20% 20% 20% 20% 20%;
+  gap: 0.75rem;
+      grid-template-areas: "AC C x² percent" "7 8 9 plus" "4 5 6 minus" "1 2 3 multip" "0 comma division equal";
+}
+
+* body #container #container-button .small-button {
+  border: solid black;
+  border-radius: 10% 10% 10% 10% / 20% 20% 20% 20%;
+  width: 5rem;
+  height: 2rem;
+  -ms-grid-column-align: center;
+      justify-self: center;
+}
+
+* body #container #container-button .button {
+  border: solid black;
+  border-radius: 10% 10% 10% 10% / 10% 10% 10% 10%;
+  width: 5rem;
+  height: 4rem;
+  -ms-grid-column-align: center;
+      justify-self: center;
+}
+
+* body #container #container-button #AC {
+  grid-area: "AC";
+}
+
+* body #container #container-button #C {
+  grid-area: "C";
+}
+
+* body #container #container-button #x² {
+  grid-area: "x²";
+}
+
+* body #container #container-button #percent {
+  grid-area: "percent";
+}
+
+* body #container #container-button #num7 {
+  grid-area: "num7";
+}
+
+* body #container #container-button #num8 {
+  grid-area: "num8";
+}
+
+* body #container #container-button #num9 {
+  grid-area: "num9";
+}
+
+* body #container #container-button #plus {
+  grid-area: "plus";
+}
+
+* body #container #container-button #num4 {
+  grid-area: "num4";
+}
+
+* body #container #container-button #num5 {
+  grid-area: "num5";
+}
+
+* body #container #container-button #num6 {
+  grid-area: "num6";
+}
+
+* body #container #container-button #minus {
+  grid-area: "minus";
+}
+
+* body #container #container-button #num1 {
+  grid-area: "num1";
+}
+
+* body #container #container-button #num2 {
+  grid-area: "num2";
+}
+
+* body #container #container-button #num3 {
+  grid-area: "num3";
+}
+
+* body #container #container-button #multip {
+  grid-area: "multip";
+}
+
+* body #container #container-button #num0 {
+  grid-area: "num0";
+}
+
+* body #container #container-button #comma {
+  grid-area: "comma";
+}
+
+* body #container #container-button #equal {
+  grid-area: "equal";
+}
+
+* body #container #container-button #division {
+  grid-area: "division";
+}
