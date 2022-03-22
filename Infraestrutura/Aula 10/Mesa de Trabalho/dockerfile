@@ -1,0 +1,6 @@
+# Escolher a imagem a ser usada, puxada do DockerHub
+FROM mongo:latest
+# Copiando a pasta html do pc para a pasta html do MongoDb
+COPY /html /usr/share/mongo/html
+
+#dockerfiler refere-se à imagem que será usada no container.
