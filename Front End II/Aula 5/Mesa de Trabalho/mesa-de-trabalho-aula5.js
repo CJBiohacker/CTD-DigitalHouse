@@ -8,9 +8,11 @@
 
 let body = document.querySelector(`body`);
 let h1 = document.querySelector(`h1`);
-let item = document.querySelectorAll(`.item`);
+// let item = document.querySelectorAll(`.item`);
 
 const darkMode = () => {
+    let itemAtualizado = document.querySelectorAll('.item');
+
     body.style.backgroundColor = 'rgb(39, 39, 39)';
     h1.style.backgroundColor = 'rgb(19, 19, 19)';
     h1.style.color = 'rgb(170, 170, 170)';
