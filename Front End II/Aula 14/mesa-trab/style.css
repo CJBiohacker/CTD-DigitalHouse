@@ -1,0 +1,17 @@
+* form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    font-size: 20px;
+}
+
+* form #submit-container {
+    padding: 5px 50px;
+}
+
+* #comentario-saida {
+    border: 1px;
+    border-style: solid;
+}
