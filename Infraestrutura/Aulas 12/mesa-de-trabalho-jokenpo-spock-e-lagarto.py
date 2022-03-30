@@ -1,5 +1,24 @@
+# CÓDIGO PRONTO DO MATERIAL
 #encoding:UTF-8
 import random
+
+# ETAPA I - Definir as variáveis de pontuação.
+
+userScore = 0
+pcScore = 0
+totalScore = 0
+winUser = 0
+winPc = 0
+
+# ETAPA II - Adicionar a função que calcula o percentual de vitórias.
+
+def percentual():
+    if totalScore > 0 :
+        x = ((totalScore - pcScore) / totalScore) * 100
+        return x
+    elif totalScore == 0:
+        x = 0
+        return x
 
 while True: 
     aleatorio = random.randrange(0, 4)
@@ -9,7 +28,8 @@ while True:
     print("3)Tesoura")
     print("4)Spock")
     print("5)Lagarto")
-    print("6)Sair do Programa")
+    print("6)Mostrar Pontuação")
+    print("7)Sair do Programa")
     opcao = int(input("O que você escolhe: "))
     
     if opcao == 1:
@@ -22,7 +42,15 @@ while True:
         escolhaUsuario = "spock"
     elif opcao == 5:
         escolhaUsuario = "lagarto"
+# ETAPA III - Adicionar a opção 6 com o placar de pontuação.
     elif opcao == 6:
+        print ("\nPontuações: ")
+        print ("Usuário: ", userScore)
+        print ("Pc: ", pcScore)
+        print ("Porcentagem de vitórias: ", percentual(), "%" )
+        print ("")
+        continue
+    elif opcao == 7:
         print ("Nos vemos!")
         break
     else:
@@ -37,30 +65,57 @@ while True:
         escolhaPc = "papel"
     elif aleatorio == 2:
         escolhaPc = "tesoura"
-    elif opcao == 3:
+    elif aleatorio == 3:
         escolhaPc = "spock"
-    elif opcao == 4:
+    elif aleatorio == 4:
         escolhaPc = "lagarto"
         
     print("PC escolheu: ", escolhaPc)
     print("...")
     
+    # Etapa IV - Adicionar os checks de vitória em cada possibilidade. "winUser = 1"
+
     if (escolhaPc == "pedra" or escolhaPc == "spock" ) and escolhaUsuario == "papel":
-        print("Ganhou, " + escolhaUsuario + "vence " + escolhaPc)
-    elif (escolhaPc == "papel" or escolhaPc == "lagarto" ) and escolhaUsuario == "tesoura":
-         print("Ganhou, " + escolhaUsuario + "vence " + escolhaPc)
+        print("Ganhou, " + escolhaUsuario + " vence " + escolhaPc)
+        winUser = 1
+    elif(escolhaPc == "papel" or escolhaPc == "lagarto" ) and escolhaUsuario == "tesoura":
+        print("Ganhou, " + escolhaUsuario + " vence " + escolhaPc)
+        winUser = 1
     elif(escolhaPc == "tesoura" or escolhaPc == "lagarto" ) and escolhaUsuario == "pedra":
-         print("Ganhou, " + escolhaUsuario + "vence " + escolhaPc)
+        print("Ganhou, " + escolhaUsuario + " vence " + escolhaPc)
+        winUser = 1
+    elif(escolhaPc == "tesoura" or escolhaPc == "pedra" ) and escolhaUsuario == "spock":
+        print("Ganhou, " + escolhaUsuario + " vence " + escolhaPc)
+        winUser = 1
+    elif(escolhaPc == "spock" or escolhaPc == "papel" ) and escolhaUsuario == "lagarto":
+        print("Ganhou, " + escolhaUsuario + " vence " + escolhaPc)
+        winUser = 1
         
-    if escolhaUsuario == "pedra" and escolhaPc == "papel":
-        print("Perdeu, papel cobre pedra")
-    elif escolhaUsuario == "papel" and escolhaPc == "tesoura":
-        print("Perdeu, tesoura corta papel")
-    elif escolhaUsuario == "tesoura" and escolhaPc == "pedra":
-        print("Perdeu, pedra amassa tesoura")
+    if (escolhaUsuario == "pedra" or escolhaUsuario == "spock" ) and escolhaPc == "papel":
+        print("Perdeu, " + escolhaPc + " vence " + escolhaUsuario)
+        winPc = 1
+    elif(escolhaUsuario == "papel" or escolhaUsuario == "lagarto" ) and escolhaPc == "tesoura":
+        print("Perdeu, " + escolhaPc + " vence " + escolhaUsuario)
+        winPc = 1
+    elif(escolhaUsuario == "tesoura" or escolhaUsuario == "lagarto" ) and escolhaPc == "pedra":
+        print("Perdeu, " + escolhaPc + " vence " + escolhaUsuario)
+        winPc = 1
+    elif(escolhaUsuario == "tesoura" or escolhaUsuario == "pedra" ) and escolhaPc == "spock":
+        print("Perdeu, " + escolhaPc + " vence " + escolhaUsuario)
+        winPc = 1
+    elif(escolhaUsuario == "spock" or escolhaUsuario == "papel" ) and escolhaPc == "lagarto":
+        print("Perdeu, " + escolhaPc + " vence " + escolhaUsuario)
+        winPc = 1
     elif escolhaPc == escolhaUsuario:
         print("Empate")
     again = input("Jogar novamente? s/n: ")
+    
+    # ETAPA V - Definir o cálculo das pontuações ao final.
+
+    userScore += winUser
+    pcScore += winPc
+    totalScore = userScore + pcScore
+    
     if 's' in again:
         continue
     elif 'n' in again:
@@ -69,7 +124,6 @@ while True:
     else:
         print("Valor Invalido")
 
-
-
+# Mesa de Trabalho - Aula 12 e 13
 # Integrantes
-# Mateus Almeida, Carlos de Lima Junior, Miguel Oduber
+# Mateus Almeida, Carlos de Lima Junior, Miguel Oduber, Giovanna Galvão, Heloísa Meister, Andre Almeida.
