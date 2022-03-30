@@ -2,9 +2,9 @@ const baseDeDados = {
     "resultado": [{
         "genero": "masculino",
         "nome": {
-            "titulo": "sr",
+            "titulo": "Sr.",
             "primeiro": "David",
-            "utlimo": "Fernando"
+            "ultimo": "Fernando"
         },
         "localizacao": {
             "rua": " Augusta , 238",
@@ -59,39 +59,41 @@ const baseDeDados = {
     }
 };
 
-let consultandoBaseDeDados = new Promise((resolve, reject) => {
-    // Aqui temos uma solicitação simulada para um banco de dados, com um atraso de 2 segundos.
-    //A lógica interna estará  no servidor e nós apenas esperaríamos por uma resposta.
-    setTimeout(function () {
-        if (baseDeDados == null) {
-            reject({
-                "mensagem": "Base de dados inexistente."
-            });
-        } else {
-            resolve(baseDeDados);
-        }
-    }, 2000);
+let nomeCompleto = `${baseDeDados.resultado[0].nome.titulo} ${baseDeDados.resultado[0].nome.primeiro} ${baseDeDados.resultado[0].nome.ultimo}`;
+console.log(nomeCompleto);
 
-});
+// let consultandoBaseDeDados = new Promise((resolve, reject) => {
+//     // Aqui temos uma solicitação simulada para um banco de dados, com um atraso de 2 segundos.
+//     // A lógica interna estará  no servidor e nós apenas esperaríamos por uma resposta.
+//     setTimeout(function () {
+//         if (baseDeDados == null) {
+//             reject({
+//                 "mensagem": "Base de dados inexistente."
+//             });
+//         } else {
+//             resolve(baseDeDados);
+//         }
+//     }, 2000);
 
-// Aqui realizamos uma consulta da promessa, aguardando sua resposta assíncrona
-consultandoBaseDeDados
-    .then((resposta) => {
-        console.log(resposta);
+// });
 
-    }).then(
+// // Aqui realizamos uma consulta da promessa, aguardando sua resposta assíncrona
+// consultandoBaseDeDados
+//     .then((resposta) => {
+//         console.log(resposta);
 
-    ).catch((err) => {
-        console.log(err);
-    });
+//     }).then(
+
+//     ).catch((err) => {
+//         console.log(err);
+//     });
 
 function renderizarDadosUsuario(dados) {
     /* -------------------------------- TAREFAS -------------------------------- */
     // Aqui  devem desenvolver uma função que é exibida na tela:
     // a foto, o nome completo do usuário e seu e-mail.
-    //  Isso deve ser baseado nas informações que chegam até nós e  são inseridas no HTML.
-    //  Dica: você pode manipular o CSS e estruturar o card ao seu gosto.
-
+    // Isso deve ser baseado nas informações que chegam até nós e  são inseridas no HTML.
+    // Dica: você pode manipular o CSS e estruturar o card ao seu gosto.
 
 
 
