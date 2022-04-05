@@ -59,43 +59,64 @@ const baseDeDados = {
     }
 };
 
-let nomeCompleto = `${baseDeDados.resultado[0].nome.titulo} ${baseDeDados.resultado[0].nome.primeiro} ${baseDeDados.resultado[0].nome.ultimo}`;
-console.log(nomeCompleto);
+let consultandoBaseDeDados = new Promise((resolve, reject) => {
+    // Aqui temos uma solicitação simulada para um banco de dados, com um atraso de 2 segundos.
+    // A lógica interna estará  no servidor e nós apenas esperaríamos por uma resposta.
+    setTimeout(function () {
+        if (baseDeDados == null) {
+            reject({
+                "mensagem": "Base de dados inexistente."
+            });
+        } else {
+            resolve(baseDeDados);
+        }
+    }, 1000);
 
-// let consultandoBaseDeDados = new Promise((resolve, reject) => {
-//     // Aqui temos uma solicitação simulada para um banco de dados, com um atraso de 2 segundos.
-//     // A lógica interna estará  no servidor e nós apenas esperaríamos por uma resposta.
-//     setTimeout(function () {
-//         if (baseDeDados == null) {
-//             reject({
-//                 "mensagem": "Base de dados inexistente."
-//             });
-//         } else {
-//             resolve(baseDeDados);
-//         }
-//     }, 2000);
+});
 
-// });
+// Aqui realizamos uma consulta da promessa, aguardando sua resposta assíncrona
+consultandoBaseDeDados
+    .then((resposta) => {
+        return resposta.resultado
 
-// // Aqui realizamos uma consulta da promessa, aguardando sua resposta assíncrona
-// consultandoBaseDeDados
-//     .then((resposta) => {
-//         console.log(resposta);
+    }).then(resultado => {
+        return resultado[0]
 
-//     }).then(
-
-//     ).catch((err) => {
-//         console.log(err);
-//     });
+    }).then(resultado => {
+        renderizarDadosUsuario(resultado)
+    })
+    .catch((err) => {
+        console.log(err);
+    });
 
 function renderizarDadosUsuario(dados) {
     /* -------------------------------- TAREFAS -------------------------------- */
     // Aqui  devem desenvolver uma função que é exibida na tela:
     // a foto, o nome completo do usuário e seu e-mail.
-    // Isso deve ser baseado nas informações que chegam até nós e  são inseridas no HTML.
+    // Isso deve ser baseado nas informações que chegam até nós e são inseridas no HTML.
     // Dica: você pode manipular o CSS e estruturar o card ao seu gosto.
+    let foto = baseDeDados.resultado[0].imagem.grande;
+    let nomeCompleto = `${baseDeDados.resultado[0].nome.titulo} ${baseDeDados.resultado[0].nome.primeiro} ${baseDeDados.resultado[0].nome.ultimo}`;
+    let email = baseDeDados.resultado[0].email
 
+    let tarjetaDiv = document.querySelector('.tarjeta');
+    let tarjetaH1 = document.createElement('h1');
+    tarjetaH1.innerHTML = `${nomeCompleto}`;
 
+    let tarjetaImg = document.createElement('img');
+    tarjetaImg.src = `${foto}`;
 
+    let tarjetaPr = document.createElement('p');
+    tarjetaPr.innerHTML = `${email}`;
+
+    tarjetaDiv.appendChild(tarjetaH1);
+    tarjetaDiv.appendChild(tarjetaImg);
+    tarjetaDiv.appendChild(tarjetaPr);
+
+    document.body.main.appendChild(tarjetaDiv);
+
+}
+
+const nomeTitulo = () => {
 
 }
