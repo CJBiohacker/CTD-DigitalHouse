@@ -15,7 +15,7 @@ const inserirCardVazio = () => {                    // imgSrc, nomeFelino, descr
     cardH2.appendChild(h2Text);
 
     let cardPr = document.createElement(`p`);
-    let prText = document.createTextNode(`O caracal (Caracal caracal), também conhecido como lince-do-deserto ou lince-persa, é um carnívoro da família dos felídeos habitante da África e da Ásia Menor. Apesar de sua aparência lembrar a de um lince, este gato selvagem é parente próximo do serval. São felinos de porte médio, sendo que em seu habitat são menores do que as panteras (leões e leopardos) e guepardos mas maiores do que os gatos selvagens africanos. `);
+    let prText = document.createTextNode(`O caracal (Caracal caracal), também conhecido como lince-do-deserto ou lince-persa, é um carnívoro da família dos felídeos habitante da África e da Ásia Menor. Apesar de sua aparência lembrar a de um lince, este gato selvagem é parente próximo do serval. São felinos de porte médio, sendo que em seu habitat são menores do que as panteras (leões e leopardos) e guepardos mas maiores do que os gatos selvagens africanos.`);
     cardPr.appendChild(prText);
 
     let cardFelino = getClassContainer.appendChild(cardItem);
