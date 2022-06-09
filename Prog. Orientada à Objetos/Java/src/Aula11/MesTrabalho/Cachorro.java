@@ -8,9 +8,12 @@ class Cachorro extends Animal {
         super.definirIdade(idade);
     }
 
-    @Override
     public void emitirSom() {
         System.out.println("Aw Aw Aw (cachorro latindo)");
+    }
+
+    public void executarHabilidade() {
+        System.out.println("Correndo !!!");
     }
 
     public static void main(String[] args) {

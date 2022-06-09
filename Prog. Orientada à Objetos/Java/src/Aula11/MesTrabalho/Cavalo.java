@@ -8,9 +8,12 @@ class Cavalo extends Animal {
         super.definirIdade(idade);
     }
 
-    @Override
     public void emitirSom() {
         System.out.println("Hiiiiin inhin hin iin (cavalo relinchando)");
+    }
+
+    public void executarHabilidade() {
+        System.out.println("Cavalgando !!!");
     }
 
     public static void main(String[] args) {

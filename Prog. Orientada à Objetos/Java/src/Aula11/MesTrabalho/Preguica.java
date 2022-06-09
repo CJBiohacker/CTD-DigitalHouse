@@ -8,12 +8,10 @@ class Preguica extends Animal {
         super.definirIdade(idade);
     }
 
-    @Override
     public void emitirSom() {
         System.out.println("A preguiça adulta não emite som, pois tem muita preguiça para isso.");
     }
 
-    @Override
     public void executarHabilidade(){
         System.out.println("Subindo na árvore !!!");
     }

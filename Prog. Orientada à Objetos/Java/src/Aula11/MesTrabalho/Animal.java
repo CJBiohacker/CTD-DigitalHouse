@@ -2,15 +2,14 @@ package Aula11.MesTrabalho;
 
 abstract class Animal {
 
+//   INTERFACE > CLASSE ABSTRATA > CLASSE CONCRETA > OBJETO (INSTANCIAÇÃO)
+
     private String nome;
     private int idade;
 
-    public void emitirSom() {
-    }
+    public abstract void emitirSom();
 
-    public void executarHabilidade(){
-        System.out.println("Correndo !!!");
-    }
+    public abstract void executarHabilidade();
 
     public void definirNome(String nome) {
         this.nome = nome;
