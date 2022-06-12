@@ -1,0 +1,15 @@
+package Checkpoint1;
+
+import org.jetbrains.annotations.NotNull;
+
+import java.util.UUID;
+
+class Gamer extends Usuario {
+    protected Gamer(String nome, String email, String senha, String nasc, String country, boolean assinatura, boolean pagamento, UUID uuid) {
+        super(nome, email, senha, nasc, country, assinatura = false, pagamento, uuid);
+    }
+
+    protected void selecionarJogoLancado(@NotNull Lancado jogo) {
+        System.out.println(jogo.acessarTitulo() + " foi selecionado.");
+    }
+}

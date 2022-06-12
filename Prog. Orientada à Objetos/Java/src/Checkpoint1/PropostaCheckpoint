@@ -1,0 +1,17 @@
+Carlos Junior resolveu alavancar seu antigo projeto de FrontEnd “endGame” para uma aplicação funcional escalável.
+A ideia geral era ser uma plataforma de Streaming de Jogos, onde qualquer usuário cadastrado poderia logar no sistema e
+escolher qualquer jogo disponível e jogar através da internet sem a necessidade de ter um PC Gamer.
+Escolheu o SpringBoot com Java no Backend, ReactJS no Front, PostgreSQL como Banco de Dados, armazenando a aplicação em nuvem
+no Heroku e no Firebase.
+
+Antes de começar a “codar” ele resolveu evoluir e criar novas regras de negócios do antigo esboço baseado no conceito de UML de
+Classes para que fizesse mais sentido já que trabalharia com o Java. A plataforma teria um campo de login de Usuário, que
+poderia ser do tipo Gamer – somente acesso aos Jogos lançados – ou do tipo endGamer – acesso à todos os jogos e DLC’s,
+inclusive aos em desenvolvimento (Alpha = false e Beta = true) –, ambas custando uma mensalidade de R$30 e R$ 50, reespectivamente.
+O Usuário teria de preencher um formulário com seu nome, e-mail, senha, data de nascimento, tipo de assinatura (true = Gamer ou false = endGamer),
+modalidade de pagamento (crédito = true e boleto = false) e país atual de acesso.
+
+Após criar a conta o Usuário receberia por e-mail um UUID gerado pelo sistema e teria a capacidade de alterar seus dados,
+inclusive o tipo de assinatura e método de pagamento. Conforme especificado no parágrafo anterior, o Jogos adicionados ao
+catálogo, poderiam ser do tipo Lançados ou Em Desenvolvimento, e em ambos os casos teriam um título, gênero, estúdio desenvolvedor,
+distribuidora, data de lançamento, e se possui Multijogador ou não.
