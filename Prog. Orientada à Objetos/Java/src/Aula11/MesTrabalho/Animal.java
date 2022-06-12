@@ -1,3 +1,5 @@
+// EQUIPE 2 : Carlos de Lima Junior, Roberto Castro, Wallace de Jesus Costa Assis, Marcos Pereira Pires, Arnaldo Ramos
+
 package Aula11.MesTrabalho;
 
 abstract class Animal {
