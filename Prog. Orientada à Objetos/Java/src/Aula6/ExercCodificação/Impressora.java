@@ -13,7 +13,6 @@ class Impressora {
         this.dataFabricacao = dataFabricacao;
         this.folhasDisponiveis = folhasDisponiveis;
     }
-
     private boolean temPapel() {
         return folhasDisponiveis > 0;
     }

@@ -1,7 +1,5 @@
 package Checkpoint1;
 
-import org.jetbrains.annotations.NotNull;
-
 import java.util.UUID;
 
 class endGamer extends Usuario {
@@ -10,11 +8,11 @@ class endGamer extends Usuario {
         super(nome, email, senha, nasc, country, assinatura, pagamento, uuid);
     }
 
-    protected String selecionarJogoLancado(@NotNull Lancado jogo) {
+    protected String selecionarJogoLancado(Lancado jogo) {
         return jogo.acessarTitulo() + " foi selecionado.";
     }
 
-    protected String selecionarJogoDesenvolvimento(@NotNull Desenvolvimento jogo) {
+    protected String selecionarJogoDesenvolvimento(Desenvolvimento jogo) {
         return jogo.acessarTitulo() + " foi selecionado.";
     }
 }
