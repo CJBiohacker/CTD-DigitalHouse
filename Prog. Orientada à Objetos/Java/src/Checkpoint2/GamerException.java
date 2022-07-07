@@ -12,3 +12,11 @@ public class GamerException extends Exception {
     }
 
 }
+
+//  TRY... CATCH --> VOCÊ MONTA NO PROGRAMA/MAIN
+//  try {
+//          CONDIÇÃO/PROCESSO
+//  } catch (GamerException e) {
+//          TRATAMENTO DE EXCEÇÃO ou MENSAGEM DA EXCEÇÃO
+//          throw new Exception(e.getMessage());
+//  }

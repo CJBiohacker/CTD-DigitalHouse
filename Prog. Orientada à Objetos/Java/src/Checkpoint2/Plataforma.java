@@ -31,7 +31,7 @@ class Plataforma {
                 "Verificando o status de Desenvolvimento... " +
                 valHeim.statusDesenvolvimento(valHeim.acessarStatusDev()));
         System.out.println("Este jogo contém bugs e possíveis erros, deseja jogá-lo assim mesmo ?!");
-        System.out.println("Ok ! Inicializando Valheilm.");
+        System.out.println("Ok ! Inicializando Valheim.");
 
         System.out.println("Atualizando catálogo de jogos em Desenvolvimento. Você jogou Valheim recentemente !" +
                 " Na última atualização, ele saiu de Alpha para a versão Beta." +
