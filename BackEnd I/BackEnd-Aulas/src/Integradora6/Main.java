@@ -1,6 +1,11 @@
 package Integradora6;
 
-import java.io.*;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
 import java.util.ArrayList;
 
 public class Main {
@@ -16,31 +21,29 @@ public class Main {
         ListaDeFuncionarios.add(func3);
         ListaDeFuncionarios.add(func4);
 
-        Empresa revoltadosInc = new Empresa("89182142001148", "Revoltados Inc.", ListaDeFuncionarios);
-
+        Empresa revoltadosInc = new Empresa("89182142001148", "Revoltados Inc.");
+        revoltadosInc.setListaFunc(ListaDeFuncionarios);
 
         try {
-            FileOutputStream funcFOS = new FileOutputStream("Funcionarios.Empresa");
+            FileOutputStream funcFOS = new FileOutputStream("Funcionarios.txt");
             ObjectOutputStream funcOOS = new ObjectOutputStream(funcFOS);
 
             funcOOS.writeObject(revoltadosInc);
             funcOOS.close();
 
-            FileInputStream funcFIS = new FileInputStream("Funcionarios");
+            FileInputStream funcFIS = new FileInputStream("Funcionarios.txt");
             ObjectInputStream funcOIS = new ObjectInputStream(funcFIS);
-            ArrayList<Funcionario> funcionariosListaEmpresa;
 
-            for (int i = 0; i < 5 ; i++) {
+            Empresa empresa = null;
+            empresa = (Empresa) funcOIS.readObject();
+            ArrayList<Funcionario> func = empresa.getListaFunc();
+
+            for (Funcionario f:func) {
                 System.out.print("Funcionario ==> ");
-                System.out.println(i + 1);
-                funcionariosListaEmpresa = (ArrayList<Funcionario>) funcOIS.readObject();
-
-                for (Funcionario func:funcionariosListaEmpresa) {
-                    System.out.println(func);
-                }
+                System.out.println("Nome: " + f.getNome() + " " + f.getSobrenome() + " - Salário: " + f.getSalario());
             }
         }
-        catch (FileNotFoundException e){
+        catch (FileNotFoundException e) {
             e.printStackTrace();
         }
     }

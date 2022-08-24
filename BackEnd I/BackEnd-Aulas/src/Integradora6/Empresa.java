@@ -8,10 +8,9 @@ public class Empresa implements Serializable {
     private String razaoSocial;
     private ArrayList<Funcionario> listaFunc;
 
-    public Empresa(String cnpj, String razaoSocial, ArrayList<Funcionario> listaFunc) {
+    public Empresa(String cnpj, String razaoSocial) {
         this.cnpj = cnpj;
         this.razaoSocial = razaoSocial;
-        this.listaFunc = listaFunc;
     }
 
     public String getCnpj() {
@@ -36,9 +35,5 @@ public class Empresa implements Serializable {
 
     public void setListaFunc(ArrayList<Funcionario> listaFunc) {
         this.listaFunc = listaFunc;
-    }
-
-    public void addFuncionario(Funcionario funcionario) {
-        this.listaFunc.add(funcionario);
     }
 }
