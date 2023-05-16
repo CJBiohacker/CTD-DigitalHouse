@@ -4,8 +4,11 @@ import './App.css'
 import CountCard from './components/CountCard';
 
 function App() {
+  const countText = "The current count is ";
+  const addText= "Click to add count by 1.";
+  const removeText = "Click to reduce count by 1.";
+  const resetText = "Click to reset count to 0.";
   const customText = "Edit <code>src/App.jsx</code> and save to test HMR.";
-  const resetText = "Click to reset count."
 
   return (
     <>
@@ -19,9 +22,11 @@ function App() {
       </div>
       <h1>Vite + React</h1>
       <CountCard 
-        buttonText={"The current count is "} 
-        cardText={customText}
+        countText={countText}
+        addText={addText}
+        removeText={removeText} 
         resetText={resetText}
+        cardText={customText}
       />
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
