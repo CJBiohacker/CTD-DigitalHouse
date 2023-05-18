@@ -1,0 +1,34 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+ul {
+  list-style-type: none;
+}
+
+ul > li {
+  border: 0.5px solid blue;
+  border-radius: 12px;
+  margin: 5px 0;
+  background-color: white;
+  color: black;
+}
+
+ul > li > h2 {
+  padding: 0 10px;
+  word-break: break-word;
+}
+
+ul > li > h3 {
+ font-size: 1.8em;
+}
+
+img {
+  aspect-ratio: 1.8/1;
+  height: 200px;
+}
