@@ -1,0 +1,18 @@
+---
+- name: "Mover um arquivo"
+  gather_facts: true
+  hosts: localhost
+
+  tasks:
+    - name: "Copiar o arquivo dados.txt para a pasta /tmp"
+      ansible.builtin.copy:
+        src: dados.txt
+        dest: /tmp
+
+    - name: "Comprime o arquivo dados.txt em formato zip"
+      become: yes
+      archive:
+        path: InfraEstrutura II/Aula7/move_file.yaml
+        dest: InfraEstrutura II/Aula7
+        format: zip
+        remove: yes

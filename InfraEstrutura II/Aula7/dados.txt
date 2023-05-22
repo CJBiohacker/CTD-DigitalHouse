@@ -1,0 +1,1 @@
+Arquivo que será movido para a pasta /tmp do ambiente linux.
