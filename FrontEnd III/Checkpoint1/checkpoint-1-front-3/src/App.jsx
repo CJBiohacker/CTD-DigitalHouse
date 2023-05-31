@@ -58,6 +58,10 @@ function App() {
   const resetCards = (event) => {
     event.preventDefault();
     setCard([]);
+    setTitle("");
+    setImgUrl("");
+    setTitleInputError("");
+    setimgUrlInputError("");
     changeDisableStatus1(true);
     changeDisableStatus2(true);
   };
