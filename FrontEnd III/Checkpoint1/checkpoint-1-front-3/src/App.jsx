@@ -51,11 +51,15 @@ function App() {
     setImgUrl("");
     setTitleInputError("");
     setimgUrlInputError("");
+    changeDisableStatus1(true);
+    changeDisableStatus2(true);
   };
 
   const resetCards = (event) => {
     event.preventDefault();
     setCard([]);
+    changeDisableStatus1(true);
+    changeDisableStatus2(true);
   };
 
   return (
