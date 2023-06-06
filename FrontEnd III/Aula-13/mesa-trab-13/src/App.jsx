@@ -7,12 +7,9 @@ const App = () => {
   useEffect(() => {
     setTimeout(() => {
       setOrder(snacks[Math.floor(Math.random() * snacks.length)]);
+      console.log("Component updated");
     }, 2000);
   }, []);
-
-  useEffect(() => {
-    console.log("Component updated");
-  });
 
   const cancelOrder = () => {
     setOrder("");
