@@ -23,6 +23,7 @@
     color: rgb(67, 6, 46);
     font-size: 20pt;
     font-weight: bold;
+    margin-top: 4%;
 }
 
 .description {
@@ -48,4 +49,8 @@
 h2 {
     color: rgb(67, 66, 66);
     font-size: xx-large;
+}
+
+.delBtn {
+    margin-bottom: 4%;
 }

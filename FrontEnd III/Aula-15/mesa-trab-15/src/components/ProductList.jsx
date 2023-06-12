@@ -1,8 +1,9 @@
 import style from "./ProductList.module.css";
 import { useEffect } from "react";
 
-function ProductList({ productList, productsIsLoading }) {
+function ProductList({ productList, productsIsLoading, deleteProduct }) {
   useEffect(() => {
+    console.log("productList ==> ", productList);
     console.log("<ProductList /> Foi Montado");
   }, []);
   return (
@@ -25,6 +26,7 @@ function ProductList({ productList, productsIsLoading }) {
                   alt={product.id}
                   className={style.img}
                 />
+                <button className={style.delBtn} onClick={() => deleteProduct(product.id)}>Deletar</button>
               </div>
             );
           })

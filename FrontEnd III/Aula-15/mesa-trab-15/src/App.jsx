@@ -116,6 +116,15 @@ function App() {
     }
   };
 
+  const deleteProduct = async (productId) => {
+    try {
+      await axios.delete(`api/products/${productId}`);
+      return getProducts();
+    } catch (error) {
+      alert(`Ocorreu um erro ao excluir o produto - Erro: ${error}`);
+    }
+  };
+
   return (
     <>
       <h2>Cadastre seu produto</h2>
@@ -203,12 +212,12 @@ function App() {
         </button>
       </form>
 
-      {/* Lista de produtos */}
       <h2>Lista de produtos</h2>
 
       <ProductList
         productList={products}
         productsIsLoading={productsIsLoading}
+        deleteProduct={deleteProduct}
       />
     </>
   );
