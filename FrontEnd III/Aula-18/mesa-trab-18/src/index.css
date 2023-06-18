@@ -137,3 +137,22 @@ ul {
   margin-top: 2%;
   margin-bottom: 2%;
 }
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th,
+td {
+  border: 1px solid black;
+  padding: 8px;
+}
+
+th {
+  background-color: hsl(235, 77%, 45%);
+}
+
+tr:nth-child(even) {
+  background-color:hsl(235, 77%, 45%);
+}
