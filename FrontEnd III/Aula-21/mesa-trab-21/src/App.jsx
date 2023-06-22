@@ -1,6 +1,7 @@
 import React from 'react';
 import SupportCallForm from './components/SupportCallForm';
 import SupportCallList from './components/SupportCallList';
+import './styles/App.css';
 
 const App = () => (
   <>
@@ -9,7 +10,7 @@ const App = () => (
     <SupportCallForm />
     <SupportCallList />
   </div>
-  <div>
+  <div id='members'>
     <h3>Integrantes</h3>
     <p>Carlos de Lima Junior</p>
     <p>Reogério P. Silva</p>
