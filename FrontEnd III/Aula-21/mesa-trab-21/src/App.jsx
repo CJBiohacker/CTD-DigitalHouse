@@ -14,9 +14,8 @@ const App = () => (
     <h3>Integrantes</h3>
     <p>Carlos de Lima Junior</p>
     <p>Reogério P. Silva</p>
-    <p>Leandro .....</p>
-    <p>Não lembro o nome</p>
-    <p>Não lembro o nome</p>
+    <p>Leonardo Almeida</p>
+    <p>Gustavo Brock</p>
   </div>
   </>
 );
